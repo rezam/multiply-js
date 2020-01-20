@@ -1,4 +1,4 @@
 # multiply-js
 Simple multiply operation by JS
 
-Combined CSS/HTMl/JS
+Combined CSS/HTML/JS
