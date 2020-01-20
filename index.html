@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+	<style>
+		* {
+			font-family: Oxygen;
+		}
+		button {
+			background-color: #eee;
+			border: 1px solid #888;
+			padding: 5px 15px;
+			cursor: pointer;
+		}
+		.action {
+			text-align: left;
+		}
+		.how {
+			opacity: 0;
+		}
+		input {
+			margin-bottom: 10px;
+		}
+	</style>
+    <title>rezam</title>
+  </head>
+  <body>
+  
+	<div class="action">
+		<label>Number 1</label>
+		<input class="number-one"></input><br>
+		<label>Number 2</label>
+		<input class="number-two"></input><br>
+		<button id="btn">result</button>
+		<p id="result"></p>
+	</div>
+  
+  <script>
+	let btnResult = document.getElementById("btn");
+	let txtResult = document.getElementById("result");
+	let numberOne = document.getElementsByClassName("number-one")[0].value;
+	let numberTwo = document.getElementsByClassName("number-two")[0].value;
+	
+	function mutiplyNums (numberOne, numberTwo) {
+		/*if(numberOne === "" || numberTwo === "") {
+			alert("Put Some Numbers!");
+			numberOne ="";
+			numberTwo ="";
+		} else {*/
+			let result = numberOne * numberTwo;
+			return result;
+		/*}*/
+	}
+		
+	btnResult.onclick = function() {
+		let result = mutiplyNums(numberOne, numberTwo);
+		
+		txtResult.innerHTML = result;
+	};
+  </script>
+  </body>
+</html>
